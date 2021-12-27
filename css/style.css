@@ -1,0 +1,7 @@
+#mainNav>ul {
+    list-style: none;
+}
+#mainNav>ul>li {
+    display: inline;
+    margin: 0 8px;
+}
