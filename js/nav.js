@@ -7,13 +7,18 @@ const linksData = [
 
 
 let mainNav = document.getElementById('mainNav');
-let links = [];
+mainNav.classList.add('list-group');
+mainNav.classList.add('list-group-horizontal-sm');
 
-function createLink(text, url) {
-    links.push(`<li><a href="${url}">${text}</a></li>`);
+function appendLink(text, url) {
+    let a = document.createElement('a');
+    a.innerHTML = text;
+    a.href = url;
+    a.classList.add('list-group-action');
+    a.classList.add('list-group-item-action');
+    a.classList.add('text-primary');
+    mainNav.appendChild(a);
 }
 
 for (let data of linksData)
-    createLink(data[0], data[1]);
-
-mainNav.innerHTML = `<ul>${links.join('<li>|</li>')}</ul>`;
+    appendLink(data[0], data[1]);
