@@ -6,7 +6,7 @@ const linksData = [
 ];
 
 let mainNav = document.getElementById('mainNav');
-mainNav.classList.add('navbar', 'navbar-expand-sm', 'navbar-light', 'bg-light', 'mb-5');
+mainNav.classList.add('navbar', 'navbar-expand-sm', 'navbar-light', 'bg-light', 'mt-3', 'mb-5');
 
 let navContainer = document.createElement('div');
 navContainer.classList.add('container-fluid');
