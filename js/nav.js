@@ -1,4 +1,4 @@
-const linksData = [
+const navData = [
     ['Home', '/'],
     ['Projects', '/projects.html'],
     ['Technologies', '/technologies.html'],
@@ -14,7 +14,7 @@ navContainer.classList.add('container-fluid');
 let navBar = document.createElement('div');
 navBar.classList.add('navbar-nav', 'mx-auto');
 const activePage = getActivePage();
-for (let data of linksData)
+for (let data of navData)
     appendLink(data[0], data[1]);
 navContainer.appendChild(navBar);
 
@@ -33,7 +33,7 @@ function appendLink(text, url) {
         a.classList.add('active', 'fw-bold');
     navBar.appendChild(a);
 
-    if (text != linksData[linksData.length - 1][0]) {
+    if (text != navData[navData.length - 1][0]) {
         let separator = document.createElement('span');
         separator.classList.add('nav-link');
         separator.innerHTML = '|';
